@@ -9,7 +9,7 @@ def longest_word(str_):
     в случае если
     """
     str_ = input("Enter some words: ")
-    return("the longest word is: " + max(str_.strip(',.!?-:;[]}{+)(_#@*&^%').split(), key = len))
+    return("the longest word is: " + max(str_.strip("!#$%&'()*+, -./:;<=>?@[\]^_`{|}~'").split(), key = len))
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
     str_ = ''

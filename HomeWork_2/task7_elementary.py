@@ -3,12 +3,12 @@ import re
 zeros at the end of the integer'''
 i=0
 num = int(input('enter an integer: '))
-if num!=0:
-    while num%10 == 0:
+if num:
+    while not num % 10:
             num = num//10;
             i +=1 
     print ("The number at the end has " + str(i) + ' zeros')
-if num == 0:
+if not num:
     print('The number at the end has 1 zero')
 #prints a tuple with 3 elements - first, third and second to the last
 elements = tuple(input("Enter number after coma: "))
