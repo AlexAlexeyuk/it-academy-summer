@@ -16,7 +16,7 @@ def sub_string(str_):
             list_1.append(i)
     for i in list_1:
         if i not in list_2:
-            List_2.append(i)
+            list_2.append(i)
     return ("You get a string without any spaces and repeats: " + ''.join(list_2))
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
