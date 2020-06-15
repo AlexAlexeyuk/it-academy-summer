@@ -1,39 +1,43 @@
-# first task
+# 1 task
 print ('Hello, world!')
-# second task
+
+
+# 2 task
 name = input('What is your name?\n')
 print ('Hi, %s.' % name)
 
-# third task
+
+# 3 task
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print ("iteration {iteration} is {name}".format(iteration=i, name=name))
     
-#fourth task
+    
+# 4 task
 parents, babies = (1, 1)
 while babies < 100:
     print ('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 
-#fivth
+    
+# 5 task
 def greet(name):
     print ('Hello', name)
-
 greet('Jack')
 greet('Jill')
 greet('Bob')
 
 
-
+# 6 task
 import re
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print (test_string, 'is a valid US local phone number')
     else:
         print (test_string, 'rejected')
+        
 
-
-
+# 7 task
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
     'apple': 1,
@@ -43,7 +47,7 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
 print ('I owe the grocer $%.2f' % grocery_bill)
 
 
-
+#8 task
 # This program adds up integers that have been passed as arguments in the command line
 import sys
 try:
@@ -53,21 +57,20 @@ except ValueError:
     print ('Please supply integer arguments')
 
 
-
+# 9 task
 # indent your Python code to put into an email
 import glob
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
 for file_name in sorted(python_files):
     print ('    ------' + file_name)
-
     with open(file_name) as f:
         for line in f:
             print ('    ' + line.rstrip())
-
     print()
 
-
+    
+# 10 task 
 from time import localtime
 
 activities = {8: 'Sleeping',
@@ -76,7 +79,6 @@ activities = {8: 'Sleeping',
               18: 'Commuting',
               20: 'Eating',
               22: 'Resting' }
-
 time_now = localtime()
 hour = time_now.tm_hour
 
@@ -88,7 +90,7 @@ else:
     print ('Unknown, AFK or sleeping!')
 
 
-
+#11 task
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
@@ -102,7 +104,7 @@ while bottles_of_beer > 1:
     bottles_of_beer -= 1
 
 
-
+# 12 task
 class BankAccount(object):
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
@@ -116,6 +118,8 @@ my_account = BankAccount(15)
 my_account.withdraw(50)
 print (my_account.balance, my_account.overdrawn())
 
+
+# 13 task
 import unittest
 def median(pool):
     copy = sorted(pool)
@@ -124,11 +128,6 @@ def median(pool):
         return copy[int((size - 1) / 2)]
     else:
         return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
-
-
-
-
-
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
@@ -140,12 +139,11 @@ if __name__ == '__main__':
     doctest.testmod()
 
 
-
+# task 14
 from itertools import groupby
 lines = '''
 This is the
 first paragraph.
-
 This is the second.
 '''.\
     splitlines()
@@ -157,12 +155,13 @@ for has_chars, frags in groupby(lines, bool):
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
-import csv
 
+
+# task 15
+import csv
 # need to define cmp function in Python 3
 def cmp(a, b):
     return (a > b) - (a < b)
-
 # write stocks data as comma-separated values
 with open('stocks.csv', 'w', newline='') as stocksFileW:
     writer = csv.writer(stocksFileW)
@@ -171,36 +170,28 @@ with open('stocks.csv', 'w', newline='') as stocksFileW:
         ['YHOO', 'Yahoo! Inc.', 27.38, 0.33, 1.22],
         ['CNET', 'CNET Networks, Inc.', 8.62, -0.13, -1.4901]
     ])
-
 # read stocks data, print status messages
 with open('stocks.csv', 'r') as stocksFile:
     stocks = csv.reader(stocksFile)
-
     status_labels = {-1: 'down', 0: 'unchanged', 1: 'up'}
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
         print ('%s is %s (%.2f)' % (name, status, float(pct)))
 
 
-
+# 16 task
 BOARD_SIZE = 8
-
 def under_attack(col, queens):
     left = right = col
-
     for r, c in reversed(queens):
         left, right = left - 1, right + 1
-
         if c in (left, col, right):
             return True
     return False
-
 def solve(n):
     if n == 0:
         return [[]]
-
     smaller_solutions = solve(n - 1)
-
     return [solution+[(n,i+1)]
         for i in range(BOARD_SIZE)
             for solution in smaller_solutions
@@ -208,29 +199,27 @@ def solve(n):
 for answer in solve(BOARD_SIZE):
     print (answer)
 
+    
+#task 17
 import itertools
-
 def iter_primes():
      # an iterator of all numbers between 2 and +infinity
      numbers = itertools.count(2)
-
      # generate primes forever
      while True:
          # get the first number from the iterator (always a prime)
          prime = next(numbers)
          yield prime
-
          # this code iteratively builds up a chain of
          # filters...slightly tricky, but ponder it a bit
          numbers = filter(prime.__rmod__, numbers)
-
 for p in iter_primes():
     if p > 1000:
         break
     print (p)
-#21 lines: XML/HTML parsing
-
-
+    
+    
+# 18 task
 dinner_recipe = '''<html><body><table>
 <tr><th>amt</th><th>unit</th><th>item</th></tr>
 <tr><td>24</td><td>slices</td><td>baguette</td></tr>
@@ -238,15 +227,12 @@ dinner_recipe = '''<html><body><table>
 <tr><td>1</td><td>cup</td><td>tomatoes</td></tr>
 <tr><td>1</td><td>jar</td><td>pesto</td></tr>
 </table></body></html>'''
-
 # From http://effbot.org/zone/element-index.htm
 import xml.etree.ElementTree as etree
 tree = etree.fromstring(dinner_recipe)
-
 # For invalid HTML use http://effbot.org/zone/element-soup.htm
 # import ElementSoup, StringIO
 # tree = ElementSoup.parse(StringIO.StringIO(dinner_recipe))
-
 pantry = set(['olive oil', 'pesto'])
 for ingredient in tree.getiterator('tr'):
     amt, unit, item = ingredient
@@ -255,18 +241,16 @@ for ingredient in tree.getiterator('tr'):
 #28 lines: 8-Queens Problem (define your own exceptions)
 
 
+# 19 task
 BOARD_SIZE = 8
-
 class BailOut(Exception):
     pass
-
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[:-1]):
         left, right = left-1, right+1
         if r in (left, col, right):
             raise BailOut
-
 def add_queen(queens):
     for i in range(BOARD_SIZE):
         test_queens = queens + [i]
@@ -279,37 +263,26 @@ def add_queen(queens):
         except BailOut:
             pass
     raise BailOut
-
 queens = add_queen([])
 print (queens)
 print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
-#33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com
 
 
+# 20 task
 import random
-
 guesses_made = 0
-
 name = input('Hello! What is your name?\n')
-
 number = random.randint(1, 20)
 print ('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
-
 while guesses_made < 6:
-
     guess = int(input('Take a guess: '))
-
     guesses_made += 1
-
     if guess < number:
         print ('Your guess is too low.')
-
     if guess > number:
         print ('Your guess is too high.')
-
     if guess == number:
         break
-
 if guess == number:
     print ('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
 else:
