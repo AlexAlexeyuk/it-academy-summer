@@ -12,7 +12,7 @@ def palindrom(n):
         left = n % 10; 
         n = n // 10; 
         n2 = n2 * 10 ;
-        n2 = n2 + left ;
+        n2 = n2 + left;
     if n2 == k:
         return True
     else:
