@@ -10,7 +10,7 @@ def total_sum(m, n, s):
     m = int(input("Сколько рублей? "))
     n = int(input("Копеек: "))
     s = int(input("Введите сколько товара вы хотите: "))
-    return (str(m*s) + " rubles " + str(n*s) + " kopecks") 
+    return (str(((m*100 + n)*s)//100) + " rubles " + str(n*s % 100) + " kopecks")
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
