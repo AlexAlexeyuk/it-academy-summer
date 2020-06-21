@@ -7,6 +7,7 @@ def total_sum(m, n, s):
     :return: строка. общая цена в рублях и копейках. 
     формат:'x rubles y kopecks'
     """
+      
     m = int(input("Сколько рублей? "))
     n = int(input("Копеек: "))
     s = int(input("Введите сколько товара вы хотите: "))
