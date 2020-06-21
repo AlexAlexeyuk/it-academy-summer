@@ -1,6 +1,7 @@
+from collections import Counter
 '''Дан список. Выведите те его элементы, которые встречаются в списке
 только один раз. Элементы нужно выводить в том порядке, в котором они встречаются в списке.'''
-from collections import Counter
+
 list_ = [1, 'a', 1, 'a', 'b']
 c = Counter(list_)
 list_1 = [x for x in list_ if c[x] == 1]
