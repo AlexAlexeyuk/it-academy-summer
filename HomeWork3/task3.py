@@ -9,7 +9,7 @@ tpl = tuple(['a', 'b', 'c'])
 lst = list(('a', 'b', 'c'))
 
 '''Сделайте следующие присвоения одной
-строкой a = 'a', b=2, c=’python’.'''
+строкой a = 'a', b = 2, c = 'python'.'''
 
 a, b, c = 'a', 2, 'python'
 
@@ -19,6 +19,6 @@ a, b, c = 'a', 2, 'python'
 
 tpl = (1, )
 for i in tpl:
-  while i <=3:
+  while i <= 3:
     print(i, end = ' ')
     i += 1
