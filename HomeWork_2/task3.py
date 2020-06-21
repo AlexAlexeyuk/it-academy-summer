@@ -1,10 +1,10 @@
 def sub_string(str_):
-    
+
     """Конструирование подстроки.
     :param str_: входная строка
     :return: строка. Получившееся выражение
     """
- 
+
     str_ = input("Enter any string: ")
     list_1 = []
     list_2 = []
