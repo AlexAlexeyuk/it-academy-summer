@@ -1,11 +1,10 @@
 def palindrom(n):
     
-    """Поиск числа фибоначчи.
-    :param n: Число.
-    :return: Bool. True или False. 
-    Является ли число палиндромом.
-    """
-    
+"""Поиск числа фибоначчи.
+:param n: Число.
+:return: Bool. True или False. 
+Является ли число палиндромом."""
+
     n = k = int(input("Enter any integer: "))
     n2 = 0
     while n > 0:
@@ -17,8 +16,7 @@ def palindrom(n):
         return True
     else:
         return False
-    
+
 if __name__ == '__main__':
-    # здесь можно сделать ввод из консоли и проверить работу функции
     n = 0
     print(palindrom(n))
