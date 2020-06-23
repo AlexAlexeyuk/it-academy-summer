@@ -13,7 +13,7 @@ if num:
 if not num:
     print('The number at the end has 1 zero')
 
-'''prints a tuple with 3 elements - 
+'''prints a tuple with 3 elements -
 first, third and second to the last'''
 
 elements = tuple(input("Enter number after coma: "))
