@@ -11,6 +11,5 @@ def fibonacci(n):
     return fib2
 
 if __name__ == '__main__':
-    # здесь можно сделать ввод из консоли и проверить работу функции
     n = 0
     print(fibonacci(n))
