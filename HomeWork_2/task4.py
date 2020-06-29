@@ -1,9 +1,12 @@
 def count_letters(str_):
-    
-"""Подсчет символов.:param str_: входная строка
-:return: кортеж. (low_number, up_number).
-low_number - количество строчных,
-up_number - количество пописных."""
+
+ 
+    """Подсчет символов.:param str_: входная строка
+
+    :return: кортеж. (low_number, up_number).
+    low_number - количество строчных,
+    up_number - количество пописных.
+    """
 
     str_ = input("Enter any string: ")
     low_number = 0
