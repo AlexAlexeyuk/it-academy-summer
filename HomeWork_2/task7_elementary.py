@@ -11,7 +11,7 @@ if num:
     while not num % 10:
         num = num // 10
         i += 1
-    print ("The number at the end has " + str(i) + ' zeros')
+    print("The number at the end has " + str(i) + ' zeros')
 if not num:
     print('The number at the end has 1 zero')
 
