@@ -1,8 +1,11 @@
 def fibonacci(n):
 
+
     """Поиск числа фибоначчи.
+
     :param n: Номер числа Фибоначчи.
-    :return: Число. n-ое число Фибоначчи"""
+    :return: Число. n-ое число Фибоначчи
+    """
 
     n = int(input("enter number in order fibonacci: "))
     fib1 = fib2 = 1
