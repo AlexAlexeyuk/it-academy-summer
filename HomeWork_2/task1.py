@@ -1,11 +1,14 @@
 def total_sum(m, n, s):
 
+
 """Подсчет общей суммы покупок.
+
 :param m: рубли
 :param n: копейки
 :param s: количество товара
 :return: строка. общая цена в рублях и копейках.
-формат:'x rubles y kopecks' """
+формат:'x rubles y kopecks' 
+"""
 
     m = int(input("Сколько рублей? "))
     n = int(input("Копеек: "))
