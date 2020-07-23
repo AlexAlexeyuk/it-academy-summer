@@ -8,3 +8,15 @@
 
 num = input('Enter few nubmers: ').split()
 print(sum(num.count(x) - 1 for x in num) // 2)
+
+#another one
+
+num = input('Enter few nubmers: ').split()
+dct = {}
+
+for element in num:
+    dct[element] = dct.get(element, 0) + 1
+
+output = sum(map(lambda element: sum(range(1, dct[element])), dct))
+
+print("Pairs in the string: ", output)
