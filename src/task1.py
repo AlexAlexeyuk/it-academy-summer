@@ -1,14 +1,10 @@
-"""Оформите решение задач из прошлых домашних работ в функции.
-
-Напишите функцию runner.
-"""
-
 import functions
 
 
 def runner(*args):
     if not args:
-        funcs_all = [funcs for funcs in dir(functions) if not funcs.startswith('__') or not funcs.endswith("__")]
+        funcs_all = [funcs for funcs in dir(functions) if
+                     not funcs.startswith('__') or not funcs.endswith("__") and callable(funcs)]
     else:
         funcs_all = [*args]
 
