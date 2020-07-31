@@ -1,8 +1,12 @@
 def square_degree_counter(number):
+
+
     """Написать программу которая находит ближайшую
+    
     степень двойки к введенному числу.
     10(8), 20(16), 1(1)
     """
+    
     dgr = 0
     while True:
         res1 = abs(number - (1 << dgr))
@@ -15,5 +19,3 @@ def square_degree_counter(number):
 
 print(square_degree_counter(10))
 print(square_degree_counter(20))
-
-
