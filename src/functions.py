@@ -3,6 +3,7 @@
 set
 """
 
+
 def dct_():
     print({el: el ** 3 for el in range(1, 21)})
 
@@ -11,6 +12,7 @@ def dct_():
 
 at the end of number
 """
+
 
 def counter_():
     i = 0
