@@ -1,7 +1,7 @@
 """ Create a runner.
 
 runner() – все фукнции вызываются по очереди
-runner(‘func_name’) – вызывается только функцию func_name. 
+runner(‘func_name’) – вызывается только функцию func_name.
 runner(‘func’, ‘func1’...) - вызывает все переданные функции
 """
 
