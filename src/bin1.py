@@ -4,6 +4,7 @@
 10(8), 20(16), 1(1)
 """
 
+
 def square_degree_counter(number):
     dgr = 0
     while True:
@@ -14,6 +15,7 @@ def square_degree_counter(number):
         else:
             dgr += 1
     return '{}'.format(1 << dgr)
+
 
 print(square_degree_counter(10))
 print(square_degree_counter(20))
